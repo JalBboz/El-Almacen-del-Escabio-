@@ -1,0 +1,528 @@
+<!DOCTYPE html>
+<html lang="es-AR"> 
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>El Almacen del Escabio</title>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+   
+
+</head>
+
+<body>
+
+    
+
+    <header class="header">
+        <div class="menu container">
+            <div class="logo-container">
+            <a href="#" class=""><img src="Imagenes/logo3.png" width="150px" alt="logo"></a>
+            </div>
+           
+            <input type="checkbox" id="menu"/>
+            <label for="menu">
+                
+                <img src="Imagenes/menu_.png" class="menu-icono" alt="menu">
+                
+            </label>
+
+             
+            
+
+            <nav class="navbar">
+                <ul>
+                    <li><a href="Index.html">Inicio</a></li>
+                    <li><a href="#ofertas">Productos</a></li>
+                    <li><a href="contacto.html">Contacto</a></li>
+                </ul>
+            </nav>
+
+
+           
+
+            <div id="carrito-icono">
+                <img id="img-carrito" src="Imagenes/iconocarrito.svg" alt="car">
+            </div>
+
+            <div id="whatsapp-icono">
+                
+                    <img id="img-whatsapp" src="Imagenes/whatsapp.svg" alt="whatsapp">
+                
+            </div>
+
+        
+            <div id="contenido-carrito">
+
+                <h2>Mi Carrito</h2>
+                <table id="lista-carrito">
+
+                    <a href="#" class=""><img src="Imagenes/logo3.png" width="100px" alt="logo"></a>
+                    
+
+                    <thead>
+                        <tr>
+                            <th>Imagen</th>
+                            <th>Nombre</th>
+                            <th>Precio</th>
+                            <th>Cantidad</th>
+                            <button id="cerrar-carrito">X</button>
+                            
+                        </div>
+
+                        <tbody>
+                            <tr>
+                                <td><input type="number" value="1" /></td>
+                                <td> <!-- Aquí estarían los datos del producto --></td>
+                                <td> <!-- Aquí estarían los datos del producto --></td>
+                                <td> <!-- Aquí estarían los datos del producto --></td>
+                                <td> <!-- Aquí estarían los botones de acción --></td>
+                            </tr>
+                            
+                        </tbody>
+                            
+
+                        </tr>
+                        
+                        
+                    </thead>
+
+                </table>
+                <p id="total">Total: $0.00</p>
+                <div class="acciones">
+                    
+                    <form id="whatsapp-form">
+                        <button type="button" id="enviar-whatsapp" class="btn-3">Enviar Pedido por WhatsApp</button>
+                    </form>
+                </div>
+            </div> 
+             
+                               
+
+
+
+        </div>
+
+
+       
+        
+        <div class="header-content container">
+            <div class="heder-txt">
+                <span>Bienvenido a nuestra tienda</span>
+                <div class="logo2">
+                    <img src="Imagenes/logo2.png" width="300px" alt="logo">
+                </div> 
+                <h1>¡Tus bebidas favoritas en un solo lugar!</h1>
+                <p>
+                    "¡Descubre nuestra selección de bebidas alcohólicas premium! 
+                    realiza tu pedido fácilmente: simplemente agrega tus productos al carrito y envíalo 
+                    por WhatsApp. Habla directamente con nuestro vendedor para coordinar 
+                    el pago y el envío. 
+                </p>
+            </div>
+            <div class="">
+                <img src="Imagenes/cervecita.png" alt="">
+                
+                
+                </div>
+                
+               
+            </div>
+        </div>
+        
+        <!-- Resto del contenido de tu página -->
+        
+
+    </header>
+
+   
+    
+
+    <div id="ofertas" class="ofertas"></div>
+
+
+
+
+
+
+    <script>
+        $(document).ready(function() {
+            // Agrega un evento de clic para cada oferta
+            $('[data-oferta]').click(function() {
+                // Oculta todas las secciones de productos
+                $('.productos-oferta').hide();
+                // Obtiene el ID de la oferta seleccionada
+                var oferta = $(this).attr('data-oferta');
+                // Muestra la sección de productos correspondiente
+                $('#' + oferta).fadeIn();
+            });
+        });
+    </script>
+
+<div id="mensaje-container">
+    <div id="mensaje">
+        <p>¡Venta al por Mayor!</p>
+    </div>
+</div>
+
+
+
+    
+    
+    <div class="modern-separator"></div>
+    
+
+    <main class="productos container">
+        
+        <section id="cervezas" class="productos-oferta">
+            <h2>Cervezas</h2>
+           
+            <div class="productos-container">
+        
+            
+            <div class="box">
+                <img src="Imagenes/scheneider.png" alt="">
+                <div class="product-txt">
+                    <h3>Schneider</h3>
+                    <p>Laton 710cc</p>
+                    <p class="Precio">$1000</p>
+                    <a href="#" class="agregar-carrito btn-3" data-id="1">Agregar al Carrito</a>
+
+                </div>
+            </div>
+            <div class="box">
+                <img src="Imagenes/quilmes.png" alt="">
+                <div class="product-txt">
+                    <h3>Quilmes</h3>
+                    <p>Lata x 473cc</p>
+                    <p class="Precio">$650</p>
+                    <a href="#" class="agregar-carrito btn-3" data-id="2">Agregar al Carrito</a>
+                    
+
+                </div>
+            </div>
+            <div class="box">
+                <img src="Imagenes/andesR.png" alt="">
+                <div class="product-txt">
+                    <h3>Andes Rubia</h3>
+                    <p>Lata x 473cc</p>
+                    <p class="Precio">$770</p>
+                    <a href="#" class="agregar-carrito btn-3" data-id="3">Agregar al Carrito</a>
+
+                </div>
+            </div>
+            <div class="box">
+                <img src="Imagenes/andes Ipa.png" alt="">
+                <div class="product-txt">
+                    <h3>Andes Ipa</h3>
+                    <p>Lata x 473cc</p>
+                    <p class="Precio">$770</p>
+                    <a href="#" class="agregar-carrito btn-3" data-id="4">Agregar al Carrito</a>
+
+                </div>
+            </div>
+            <div class="box">
+                <img src="Imagenes/andes roja.png" alt="">
+                <div class="product-txt">
+                    <h3>Andes Roja</h3>
+                    <p>Lata x 473cc</p>
+                    <p class="Precio">$770</p>
+                    <a href="#" class="agregar-carrito btn-3" data-id="5">Agregar al Carrito</a>
+
+                </div>
+            </div>
+            <div class="box">
+                <img src="Imagenes/bud.png" alt="">
+                <div class="product-txt">
+                    <h3>Budwiser</h3>
+                    <p>Lata x 473cc</p>
+                    <p class="Precio">770</p>
+                    <a href="#" class="agregar-carrito btn-3" data-id="6">Agregar al Carrito</a>
+
+                </div>
+            </div>
+            <div class="box">
+                <img src="Imagenes/h710.png" alt="">
+                <div class="product-txt">
+                    <h3>Heineken</h3>
+                    <p>Laton 710cc</p>
+                    <p class="Precio">$1700</p>
+                    <a href="#" class="agregar-carrito btn-3" data-id="7">Agregar al Carrito</a>
+
+                </div>
+            </div>
+            <div class="box">
+                <img src="Imagenes/porron.png" alt="">
+                <div class="product-txt">
+                    <h3>Heineken</h3>
+                    <p>Porron 330</p>
+                    <p class="Precio">$800</p>
+                    <a href="#" class="agregar-carrito btn-3" data-id="8">Agregar al Carrito</a>
+
+                </div>
+            </div>
+            <div class="box">
+                <img src="Imagenes/stellaB.png" alt="">
+                <div class="product-txt">
+                    <h3>Stella Balanche</h3>
+                    <p>Lata x 473cc</p>
+                    <p class="Precio">$800</p>
+                    <a href="#" class="agregar-carrito btn-3" data-id="9">Agregar al Carrito</a>
+
+                </div>
+            </div>
+            <div class="box">
+                <img src="Imagenes/h413.png" alt="">
+                <div class="product-txt">
+                    <h3>Heineken</h3>
+                    <p>Lata x 473cc</p>
+                    <p class="Precio">$1100</p>
+                    <a href="#" class="agregar-carrito btn-3" data-id="10">Agregar al Carrito</a>
+
+                </div>
+            </div>
+            </div>
+            
+           
+        </section>
+
+
+        <div class="modern-separator"></div>
+    
+
+        <!-- Productos de vinos -->
+        <section id="vinos" class="productos-oferta">
+            <h2>Vinos</h2>
+          
+            <div class="productos-container">
+            <!-- Agrega productos de vinos aquí -->
+            <div class="box">
+                <img src="Imagenes/intocables.png" alt="">
+                <div class="product-txt">
+                    <h3>Vino Los Intocables</h3>
+                    <p>Malbec</p>
+                    <p class="Precio">$7500</p>
+                    <a href="vinos.html" class="agregar-carrito btn-3" data-id="1">Agregar al Carrito</a>
+
+                </div>
+            </div>
+            <div class="box">
+                <img src="Imagenes/david.png" alt="">
+                <div class="product-txt">
+                    <h3>Vino Don David</h3>
+                    <p>Malbec</p>
+                    <p class="Precio">$4200</p>
+                    <a href="#" class="agregar-carrito btn-3" data-id="2">Agregar al Carrito</a>
+
+                </div>
+            </div>
+            <div class="box">
+                <img src="Imagenes/fond de cabe.png" alt="">
+                <div class="product-txt">
+                    <h3>Vino Fond de Cabe</h3>
+                    <p>Alta Calidad</p>
+                    <p class="Precio">$5200</p>
+                    <a href="#" class="agregar-carrito btn-3" data-id="3">Agregar al Carrito</a>
+
+                </div>
+            </div>
+            <div class="box">
+                <img src="Imagenes/tardia.png" alt="">
+                <div class="product-txt">
+                    <h3>Cosecha Tardia</h3>
+                    <p>Vino Blanco</p>
+                    <p class="Precio">$3000</p>
+                    <a href="#" class="agregar-carrito btn-3" data-id="4">Agregar al Carrito</a>
+
+                </div>
+            </div>
+           </div>
+           
+             
+        </section>
+
+
+        <div class="modern-separator"></div>
+
+
+        <!-- Productos de aperitivos -->
+        <section id="aperitivos" class="productos-oferta">
+            <h2>Aperitivos</h2>
+          
+            
+            <div class="productos-container">
+            <!-- Agrega productos de aperitivos aquí -->
+            <div class="box">
+                <img src="Imagenes/MALIBU.png" alt="">
+                <div class="product-txt">
+                    <h3>Malibu</h3>
+                    <p>Aperitivo 750cc</p>
+                    <p class="Precio">$10000</p>
+                    <a href="#" class="agregar-carrito btn-3" data-id="1">Agregar al Carrito</a>
+
+                </div>
+            </div>
+            <div class="box">
+                <img src="Imagenes/fernet.png" alt="">
+                <div class="product-txt">
+                    <h3>Fernet</h3>
+                    <p>Aperitivo 750cc</p>
+                    <p class="Precio">$8000</p>
+                    <a href="#" class="agregar-carrito btn-3" data-id="2">Agregar al Carrito</a>
+
+                </div>
+            </div>
+            <div class="box">
+                <img src="Imagenes/campari.png" alt="">
+                <div class="product-txt">
+                    <h3>Campari</h3>
+                    <p>Aperitivo 750cc</p>
+                    <p class="Precio">$4500</p>
+                    <a href="#" class="agregar-carrito btn-3" data-id="3">Agregar al Carrito</a>
+
+                </div>
+            </div>
+            </div>
+            
+            
+        </section>
+
+        <div class="modern-separator"></div>
+
+        <!-- Productos de champagne -->
+        <section id="champagne" class="productos-oferta">
+            <h2>Champagne</h2>
+          
+            
+            <div class="productos-container">
+            <!-- Agrega productos de champagne aquí -->
+            <div class="box">
+                <img src="Imagenes/cHANDON2.png" alt="">
+                <div class="product-txt">
+                    <h3>Chandon Delice</h3>
+                    <p>Champagne</p>
+                    <p class="Precio">$6000</p>
+                    <a href="#" class="agregar-carrito btn-3" data-id="1">Agregar al Carrito</a>
+
+                </div>
+            </div>
+            <div class="box">
+                <img src="Imagenes/chandon.png" alt="">
+                <div class="product-txt">
+                    <h3>Chandon Extra Brut</h3>
+                    <p>Espumante</p>
+                    <p class="Precio">$6000</p>
+                    <a href="#" class="agregar-carrito btn-3" data-id="2">Agregar al Carrito</a>
+
+                </div>
+            </div>
+            <div class="box">
+                <img src="Imagenes/1888.png" alt="">
+                <div class="product-txt">
+                    <h3>Sidra 1888</h3>
+                    <p>Grande</p>
+                    <p class="Precio">$2500</p>
+                    <a href="#" class="agregar-carrito btn-3" data-id="3">Agregar al Carrito</a>
+
+                </div>
+            </div>
+            <div class="box">
+                <img src="Imagenes/fresita.png" alt="">
+                <div class="product-txt">
+                    <h3>Fresita</h3>
+                    <p>Espumante</p>
+                    <p class="Precio">$4000</p>
+                    <a href="#" class="agregar-carrito btn-3" data-id="4">Agregar al Carrito</a>
+
+                </div>
+            </div>
+            <div class="box">
+                <img src="Imagenes/bb.png" alt="">
+                <div class="product-txt">
+                    <h3>Baran B</h3>
+                    <p>Champagne</p>
+                    <p class="Precio">$15000</p>
+                    <a href="#" class="agregar-carrito btn-3" data-id="5">Agregar al Carrito</a>
+
+                </div>
+            </div>
+            </div>
+            
+        </section>
+
+    </main>
+
+
+
+    
+    <section class="testimonial container">
+        <span>Testimoniales</span>
+        <h2>Que opinan nuestras clientes</h2>
+        <div class="testimonial-content">
+            <div class="testimonial-1">
+                <p>"¡Increíble experiencia de compra! Pedí dos botellas de Fernet 
+                    desde esta página y el proceso fue súper fácil. Agregué mis productos 
+                    al carrito y los envié por WhatsApp en segundos. ¡El vendedor fue muy amable 
+                    y rápido en responder! Coordinamos el pago y el envío sin complicaciones. 
+                    Mis bebidas llegaron en perfecto estado y en tiempo récord. Definitivamente 
+                    volveré a comprar aquí. ¡Gracias por el excelente servicio!"
+            </p>
+            <img src="Imagenes/star.png" alt="">
+            <h4>Sebastian Ruiz</h4>
+
+            </div>
+            <div class="testimonial-1">
+                <p>"¡Una verdadera joya para los amantes de las bebidas alcohólicas! Hice mi
+                     pedido a través de la página web y quedé impresionado. El proceso de agregar
+                      los productos al carrito y enviarlo por WhatsApp fue tan simple que me sorprendió. 
+                      Además, el vendedor fue muy atento y profesional en todo momento, 
+                      facilitándome el pago y asegurándose de que mi pedido llegara a tiempo. 
+                      ¡Definitivamente recomendaré esta tienda a mis amigos y familiares! Gracias 
+                      por una experiencia de compra tan placentera."
+            </p>
+            <img src="Imagenes/star.png" alt="">
+            <h4>Liliana Ortiz</h4>
+
+            </div>
+
+        </div>
+
+
+    </section>
+    
+    <footer class="footer">
+        <div class="footer-container">
+            <div class="footer-section">
+                <h3>Enlaces útiles</h3>
+                <ul>
+                    <li><a href="Index.html">Inicio</a></li>
+                    <li><a href="#ofertas">Productos</a></li>
+                    <li><a href="contacto.html">Contacto</a></li>
+                    
+                </ul>
+            </div>
+            <div class="footer-section">
+                <h3>Redes sociales</h3>
+                <ul>
+                    <li><a href="https://www.facebook.com/profile.php?id=100063952788355&mibextid=ZbWKwL">Facebook</a></li>
+                    <li><a href="https://www.instagram.com/elalmacendelescabio?igsh=dzdoOWtwMmdrMHB6">Instagram</a></li>
+                </ul>
+            </div>
+           
+            <div class="footer-section">
+                <h3>Créditos y derechos de autor</h3>
+                <p>Todos los derechos reservados © 2024</p>
+                <p>Diseñado por Juan Manuel Albornoz</p>
+                <img src="Imagenes/jalbboz1.png" width="170px" alt="logo" /></a>
+                
+            </div>
+        </div>
+    </footer>
+
+    
+<script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+<script src="script.js"></script>
+<link rel="stylesheet" href="style.css">
+
+</body>
+</html>
